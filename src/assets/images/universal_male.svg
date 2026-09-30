@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <!-- Background with subtle technical grid -->
+  <rect width="240" height="240" fill="#f8fafc" />
+  <circle cx="120" cy="120" r="108" fill="#f1f5f9" stroke="#09090b" stroke-width="2.5" />
+  
+  <!-- Subtle technical marks -->
+  <line x1="120" y1="12" x2="120" y2="24" stroke="#dc2626" stroke-width="2" />
+  <line x1="120" y1="216" x2="120" y2="228" stroke="#09090b" stroke-width="1.5" />
+  <line x1="12" y1="120" x2="24" y2="120" stroke="#09090b" stroke-width="1.5" />
+  <line x1="216" y1="120" x2="228" y2="120" stroke="#09090b" stroke-width="1.5" />
+
+  <g id="male-universal-silhouette">
+    <!-- Torso / Shoulders with research collar -->
+    <path d="M46 220 C 52 178, 80 156, 98 150 L 104 136 C 100 132, 98 126, 98 118 L 102 118 C 102 124, 104 128, 108 130 L 112 144 L 128 144 L 132 130 C 136 128, 138 124, 138 118 L 142 118 C 142 126, 140 132, 136 136 L 142 150 C 160 156, 188 178, 194 220 Z" 
+          fill="#09090b" stroke="#09090b" stroke-width="2" stroke-linejoin="round" />
+    
+    <!-- Research uniform collar accent -->
+    <path d="M102 168 L 120 186 L 138 168" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="120" cy="198" r="2.5" fill="#dc2626" />
+
+    <!-- Neck -->
+    <path d="M108 114 L 108 136 L 132 136 L 132 114 Z" fill="#e2e8f0" stroke="#09090b" stroke-width="2" />
+
+    <!-- Head / Face -->
+    <path d="M96 92 C 96 124, 104 138, 120 138 C 136 138, 144 124, 144 92 C 144 64, 134 52, 120 52 C 106 52, 96 64, 96 92 Z" 
+          fill="#f1f5f9" stroke="#09090b" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Minimal Ears -->
+    <path d="M94 92 C 92 88, 92 102, 95 106" fill="none" stroke="#09090b" stroke-width="2" stroke-linecap="round" />
+    <path d="M146 92 C 148 88, 148 102, 145 106" fill="none" stroke="#09090b" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Minimal Male Hair Cut - Clean short research crop -->
+    <path d="M94 78 C 94 56, 104 42, 120 42 C 136 42, 146 56, 146 78 C 146 80, 142 74, 136 72 C 128 70, 116 68, 108 72 C 100 75, 96 80, 94 78 Z" 
+          fill="#09090b" stroke="#09090b" stroke-width="2" stroke-linejoin="round" />
+
+    <!-- Minimal Eyes / Brow line - Clean & understated -->
+    <line x1="106" y1="88" x2="114" y2="88" stroke="#09090b" stroke-width="2" stroke-linecap="round" />
+    <line x1="126" y1="88" x2="134" y2="88" stroke="#09090b" stroke-width="2" stroke-linecap="round" />
+    <path d="M119 96 L 121 102 L 118 103" fill="none" stroke="#09090b" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="115" y1="114" x2="125" y2="114" stroke="#09090b" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Spec identifier stamp -->
+  <text x="120" y="234" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="#71717a" letter-spacing="1">
+    SPEC-M // HUMAN SUBJECT
+  </text>
+</svg>

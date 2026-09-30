@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --obsidian: #0A0A0A;
+    --app-white: #FFFFFF;
+    --app-black: #000000;
+    --app-red: #DC2626;
+    --app-red-hover: #B91C1C;
+    --app-red-light: rgba(220, 38, 38, 0.08);
+    --surface-card: #FFFFFF;
+    --surface-card-subtle: #F8F9FA;
+    --surface-border: #E5E7EB;
+    --surface-border-strong: #000000;
+
+    --amber: #DC2626;
+    --golden: #000000;
+    --earth: #E5E7EB;
+    --stark-white: #FFFFFF;
+
+    --motion-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    --motion-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    --motion-emphasis: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+    --motion-cinematic: 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  body {
+    background-color: #FAFAFA;
+    color: #0A0A0A;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Moving Grid Motion Graphics on Crisp Light Background */
+@keyframes moving-grid-flow {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 40px 40px, 80px 80px;
+  }
+}
+
+@keyframes moving-grid-diagonal {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 60px;
+  }
+}
+
+@keyframes moving-scanline {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(1200%);
+    opacity: 0;
+  }
+}
+
+.bg-moving-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moving-grid-flow 16s linear infinite;
+}
+
+.bg-moving-grid-red {
+  background-image: 
+    linear-gradient(to right, rgba(220, 38, 38, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 38, 38, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  animation: moving-grid-diagonal 12s linear infinite;
+}
+
+.bg-grid-tech {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-grid-tech-dense {
+  background-image: 
+    linear-gradient(to right, rgba(220, 38, 38, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 38, 38, 0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Subtle glowing data traces & borders in Scientific Red */
+.glow-amber-subtle,
+.glow-red-subtle {
+  box-shadow: 0 0 20px -3px rgba(220, 38, 38, 0.22);
+}
+
+.glow-amber-strong,
+.glow-red-strong {
+  box-shadow: 0 0 30px 2px rgba(220, 38, 38, 0.35);
+}
+
+.glow-golden-subtle {
+  box-shadow: 0 0 20px -4px rgba(0, 0, 0, 0.15);
+}
+
+.border-amber-glow,
+.border-red-glow {
+  border-color: rgba(220, 38, 38, 0.45);
+  box-shadow: 0 0 10px -1px rgba(220, 38, 38, 0.2);
+}
+
+/* HUD Corner Brackets - Classified White + Black + Red Aesthetic */
+.hud-corner-tl {
+  position: relative;
+}
+.hud-corner-tl::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #DC2626;
+  border-left: 2px solid #DC2626;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hud-corner-br::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #DC2626;
+  border-right: 2px solid #DC2626;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hud-corners {
+  position: relative;
+}
+.hud-corners::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #DC2626;
+  border-left: 2px solid #DC2626;
+  pointer-events: none;
+  z-index: 10;
+}
+.hud-corners::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #DC2626;
+  border-right: 2px solid #DC2626;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Scanner Sweep Effect */
+.animate-scanline {
+  animation: moving-scanline 4.5s linear infinite;
+}
+
+/* Subtle Breathing Animation for AI Cores */
+@keyframes core-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+.animate-core-breathe {
+  animation: core-breathe 4s ease-in-out infinite;
+}
+
+/* Rotating AI Orbit Rings */
+@keyframes orbit-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-orbit-cw {
+  animation: orbit-clockwise 18s linear infinite;
+}
+
+.animate-orbit-cw-fast {
+  animation: orbit-clockwise 6s linear infinite;
+}
+
+.animate-orbit-ccw {
+  animation: orbit-counter 24s linear infinite;
+}
+
+/* Custom Scrollbars in Crisp White & Black/Red */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F4F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DC2626;
+}
+
+/* Print optimizations */
+@media print {
+  header, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+}
+
+/* Mobile Touch & Viewport Optimizations */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+

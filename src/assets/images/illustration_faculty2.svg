@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-fac2" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#fdf4ff" />
+      <stop offset="100%" stop-color="#fae8ff" />
+    </radialGradient>
+  </defs>
+
+  <!-- Technical Framing -->
+  <rect width="280" height="280" fill="url(#bg-grad-fac2)" rx="16" />
+  <circle cx="140" cy="135" r="115" fill="#ffffff" stroke="#3b0764" stroke-width="2.5" />
+  <circle cx="140" cy="135" r="108" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="4 3" />
+
+  <!-- Body / Formal Academic Blazer -->
+  <g id="body">
+    <path d="M55 248 C 65 195, 95 170, 115 162 L 122 148 C 118 144, 116 138, 116 130 L 120 130 C 120 136, 122 140, 126 142 L 130 156 L 150 156 L 154 142 C 158 140, 160 136, 160 130 L 164 130 C 164 138, 162 144, 158 148 L 165 162 C 185 170, 215 195, 225 248 Z" 
+          fill="#3b0764" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <path d="M124 158 L 140 186 L 156 158 Z" fill="#ffffff" stroke="#e9d5ff" stroke-width="1" />
+    <path d="M116 166 L 140 196 L 164 166" fill="none" stroke="#c084fc" stroke-width="2" />
+
+    <!-- Neck -->
+    <path d="M126 122 L 126 148 L 154 148 L 154 122 Z" fill="#fed7aa" stroke="#000000" stroke-width="2" />
+  </g>
+
+  <!-- Head & Academic Faculty Features (Faculty 2) -->
+  <g id="head">
+    <path d="M106 98 C 100 94, 100 114, 107 116" fill="#fed7aa" stroke="#000000" stroke-width="2" />
+    <path d="M174 98 C 180 94, 180 114, 173 116" fill="#fed7aa" stroke="#000000" stroke-width="2" />
+
+    <!-- Face Shape - Articulate, sharp, professional academic -->
+    <path d="M110 92 C 110 132, 120 146, 140 146 C 160 146, 170 132, 170 92 C 170 62, 158 52, 140 52 C 122 52, 110 62, 110 92 Z" 
+          fill="#fed7aa" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Sharp Eyebrows -->
+    <path d="M118 84 Q 128 80 134 83" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M146 83 Q 152 80 162 84" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Eyes (Focused, perceptive gaze) -->
+    <ellipse cx="126" cy="91" rx="4" ry="3.5" fill="#000000" />
+    <circle cx="127" cy="90" r="1" fill="#ffffff" />
+    <ellipse cx="154" cy="91" rx="4" ry="3.5" fill="#000000" />
+    <circle cx="155" cy="90" r="1" fill="#ffffff" />
+
+    <!-- Modern Academic Thin Spectacles -->
+    <rect x="116" y="83" width="22" height="16" rx="4" fill="none" stroke="#581c87" stroke-width="1.8" />
+    <rect x="142" y="83" width="22" height="16" rx="4" fill="none" stroke="#581c87" stroke-width="1.8" />
+    <line x1="138" y1="90" x2="142" y2="90" stroke="#581c87" stroke-width="1.8" />
+
+    <!-- Nose -->
+    <path d="M139 92 L 141 106 L 137 108" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Composed mouth -->
+    <path d="M130 123 Q 140 126 150 123" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" />
+
+    <!-- Neat Professional Pulled-Back Academic Haircut / Bun -->
+    <path d="M108 78 C 106 48, 120 34, 140 34 C 160 34, 172 48, 172 78 C 172 80, 166 70, 158 68 C 148 66, 132 66, 122 68 C 114 70, 110 74, 108 78 Z" 
+          fill="#18181b" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+    <ellipse cx="140" cy="32" rx="16" ry="10" fill="#18181b" stroke="#000000" stroke-width="1.5" />
+  </g>
+
+  <!-- Technical Overlay HUD Badge -->
+  <g transform="translate(30, 244)">
+    <rect width="220" height="24" rx="4" fill="#3b0764" />
+    <text x="110" y="16" text-anchor="middle" font-family="'Space Mono', monospace, sans-serif" font-size="9.5" font-weight="bold" fill="#ffffff" letter-spacing="1">
+      FACULTY 2 // HX-004
+    </text>
+  </g>
+
+  <!-- Connection Only Badge -->
+  <rect x="20" y="18" width="138" height="18" rx="3" fill="#9333ea" />
+  <text x="89" y="31" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="#ffffff" letter-spacing="0.5">
+    NOT OBSERVING // FACULTY
+  </text>
+</svg>

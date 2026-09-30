@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-basil" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#ecfdf5" />
+      <stop offset="100%" stop-color="#d1fae5" />
+    </radialGradient>
+  </defs>
+
+  <!-- Technical Framing -->
+  <rect width="280" height="280" fill="url(#bg-grad-basil)" rx="16" />
+  <circle cx="140" cy="135" r="115" fill="#ffffff" stroke="#064e3b" stroke-width="2.5" />
+  <circle cx="140" cy="135" r="108" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="4 3" />
+
+  <!-- Body / College T-shirt & Denim Jacket -->
+  <g id="body">
+    <path d="M55 248 C 65 195, 95 170, 115 162 L 122 148 C 118 144, 116 138, 116 130 L 120 130 C 120 136, 122 140, 126 142 L 130 156 L 150 156 L 154 142 C 158 140, 160 136, 160 130 L 164 130 C 164 138, 162 144, 158 148 L 165 162 C 185 170, 215 195, 225 248 Z" 
+          fill="#064e3b" stroke="#022c22" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <path d="M126 156 L 140 180 L 154 156" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5" />
+
+    <!-- Neck -->
+    <path d="M126 122 L 126 148 L 154 148 L 154 122 Z" fill="#fed7aa" stroke="#000000" stroke-width="2" />
+  </g>
+
+  <!-- Head & Classmate Features (Basil Babu) -->
+  <g id="head">
+    <path d="M106 98 C 100 94, 100 114, 107 116" fill="#fed7aa" stroke="#000000" stroke-width="2" />
+    <path d="M174 98 C 180 94, 180 114, 173 116" fill="#fed7aa" stroke="#000000" stroke-width="2" />
+
+    <!-- Face Shape - Sharp, observant jawline -->
+    <path d="M108 92 C 108 132, 118 146, 140 146 C 162 146, 172 132, 172 92 C 172 62, 160 52, 140 52 C 120 52, 108 62, 108 92 Z" 
+          fill="#fed7aa" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Sharp Eyebrows -->
+    <path d="M118 84 Q 128 82 134 85" fill="none" stroke="#000000" stroke-width="2.8" stroke-linecap="round" />
+    <path d="M146 85 Q 152 82 162 84" fill="none" stroke="#000000" stroke-width="2.8" stroke-linecap="round" />
+
+    <!-- Eyes (Observant, keen) -->
+    <ellipse cx="126" cy="92" rx="4" ry="3.5" fill="#000000" />
+    <circle cx="127" cy="91" r="1" fill="#ffffff" />
+    <ellipse cx="154" cy="92" rx="4" ry="3.5" fill="#000000" />
+    <circle cx="155" cy="91" r="1" fill="#ffffff" />
+
+    <!-- Nose -->
+    <path d="M139 92 L 141 106 L 137 108" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Mouth - Sardonic counter-roaster half-smile -->
+    <path d="M130 122 Q 138 126 150 121" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Modern Textured Crop Hair -->
+    <path d="M106 76 C 104 46, 120 34, 140 34 C 164 34, 176 46, 174 76 C 174 78, 170 70, 164 68 C 152 64, 132 62, 122 66 C 114 69, 108 74, 106 76 Z" 
+          fill="#1c1917" stroke="#0c0a09" stroke-width="2" stroke-linejoin="round" />
+    <path d="M114 54 Q 128 42 144 46" fill="none" stroke="#44403c" stroke-width="1.8" />
+  </g>
+
+  <!-- Technical Overlay HUD Badge -->
+  <g transform="translate(30, 244)">
+    <rect width="220" height="24" rx="4" fill="#064e3b" />
+    <text x="110" y="16" text-anchor="middle" font-family="'Space Mono', monospace, sans-serif" font-size="9.5" font-weight="bold" fill="#ffffff" letter-spacing="1">
+      BASIL BABU // HX-005
+    </text>
+  </g>
+
+  <!-- Connection Only Badge -->
+  <rect x="20" y="18" width="136" height="18" rx="3" fill="#059669" />
+  <text x="88" y="31" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="#ffffff" letter-spacing="0.5">
+    NOT OBSERVING // FRIEND
+  </text>
+</svg>
