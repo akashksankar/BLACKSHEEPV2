@@ -3,7 +3,7 @@
  * Strategic Humanoid Experiment and Evaluation Protocol
  */
 
-import express, { Request, Response, NextFunction } from 'express';
+import express, { type Request, type Response, type NextFunction } from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
@@ -15,6 +15,39 @@ dotenv.config();
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
 const IS_DEV = process.env.NODE_ENV !== 'production';
+
+// Global CORS headers for cross-origin and serverless environments
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
+
+// URL Normalizer: Handles Vercel rewrite variations (e.g. /api/auth/login vs /auth/login)
+app.use((req, res, next) => {
+  if (req.url && !req.url.startsWith('/api')) {
+    const isApiRoute =
+      req.url.startsWith('/auth') ||
+      req.url.startsWith('/subjects') ||
+      req.url.startsWith('/cases') ||
+      req.url.startsWith('/experiments') ||
+      req.url.startsWith('/rag') ||
+      req.url.startsWith('/ai') ||
+      req.url.startsWith('/system') ||
+      req.url.startsWith('/timeline') ||
+      req.url.startsWith('/anomalies') ||
+      req.url.startsWith('/hypotheses') ||
+      req.url.startsWith('/game');
+    if (isApiRoute) {
+      req.url = '/api' + (req.url.startsWith('/') ? req.url : '/' + req.url);
+    }
+  }
+  next();
+});
 
 app.use(express.json());
 
@@ -2587,8 +2620,8 @@ async function startServer() {
 }
 
 // In local development / AI Studio container, boot standard HTTP listener
-// In Vercel serverless environments, Vercel executes the exported Express app directly
-if (!process.env.VERCEL) {
+// In Vercel / serverless environments, Vercel executes the exported Express app directly
+if (!process.env.VERCEL && !process.env.VERCEL_ENV && !process.env.AWS_LAMBDA_FUNCTION_NAME) {
   startServer().catch((err) => {
     console.error('[FATAL SERVER ERROR]', err);
     process.exit(1);

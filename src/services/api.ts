@@ -13,7 +13,20 @@ function getAuthHeaders(): HeadersInit {
 }
 
 async function handleResponse<T>(res: Response): Promise<T> {
-  const data = await res.json();
+  const contentType = res.headers.get('content-type') || '';
+  if (!contentType.includes('application/json')) {
+    const rawText = await res.text();
+    const cleanSnippet = rawText.replace(/<[^>]*>?/gm, '').trim().slice(0, 150);
+    throw new Error(cleanSnippet || `Server returned HTTP ${res.status}: ${res.statusText}`);
+  }
+
+  let data: any;
+  try {
+    data = await res.json();
+  } catch (parseErr) {
+    throw new Error(`Failed to parse server response as JSON (HTTP ${res.status})`);
+  }
+
   if (!res.ok || data.success === false) {
     const errorMsg = data.error?.message || `HTTP ${res.status}: Request failed`;
     throw new Error(errorMsg);
